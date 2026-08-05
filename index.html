@@ -29,6 +29,18 @@
         .lla-gradient {
             background: linear-gradient(135deg, #6d28d9 0%, #a21caf 45%, #db2777 100%);
         }
+        /* Ícono de Instagram pintado con el degradado institucional */
+        .ig-logo {
+            color: #a21caf; /* respaldo si el navegador no soporta background-clip */
+        }
+        @supports ((-webkit-background-clip: text) or (background-clip: text)) {
+            .ig-logo {
+                background: linear-gradient(135deg, #6d28d9 0%, #a21caf 45%, #db2777 100%);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+            }
+        }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-800 font-sans antialiased">
@@ -75,44 +87,20 @@
 
             <!-- Seguinos en nuestras redes -->
             <h3 class="font-bold text-gray-600 mt-6 mb-3 px-1 text-lg">Seguinos en nuestras redes</h3>
-            <div class="grid grid-cols-1 gap-3">
-                <a href="https://www.instagram.com/acciontandilense/" target="_blank" rel="noopener" class="flex items-center justify-between bg-gradient-to-r from-purple-600 to-pink-500 text-white p-4 rounded-xl shadow-sm active:scale-[0.98] transition">
-                    <div class="flex items-center gap-3">
-                        <div class="bg-white bg-opacity-20 w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0">
-                            <i class="fab fa-instagram text-2xl"></i>
-                        </div>
-                        <div>
-                            <div class="font-bold leading-tight">Acción Tandilense</div>
-                            <div class="text-xs text-pink-100">@acciontandilense</div>
-                        </div>
-                    </div>
-                    <i class="fas fa-chevron-right text-pink-100"></i>
+            <div class="grid grid-cols-3 gap-3">
+                <a href="https://www.instagram.com/acciontandilense/" target="_blank" rel="noopener" aria-label="Instagram Acción Tandilense (@acciontandilense)" class="bg-white rounded-xl shadow-sm border border-gray-100 p-3 flex flex-col items-center justify-start gap-2 hover:shadow-md active:scale-95 transition">
+                    <i class="fab fa-instagram text-3xl ig-logo"></i>
+                    <span class="text-[11px] font-semibold text-gray-700 leading-tight text-center">Acción Tandilense</span>
                 </a>
 
-                <a href="https://www.instagram.com/lalibertadavanza.tandil/" target="_blank" rel="noopener" class="flex items-center justify-between bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white p-4 rounded-xl shadow-sm active:scale-[0.98] transition">
-                    <div class="flex items-center gap-3">
-                        <div class="bg-white bg-opacity-20 w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0">
-                            <i class="fab fa-instagram text-2xl"></i>
-                        </div>
-                        <div>
-                            <div class="font-bold leading-tight">La Libertad Avanza Tandil</div>
-                            <div class="text-xs text-violet-100">@lalibertadavanza.tandil</div>
-                        </div>
-                    </div>
-                    <i class="fas fa-chevron-right text-violet-100"></i>
+                <a href="https://www.instagram.com/lalibertadavanza.tandil/" target="_blank" rel="noopener" aria-label="Instagram LLA Tandil (@lalibertadavanza.tandil)" class="bg-white rounded-xl shadow-sm border border-gray-100 p-3 flex flex-col items-center justify-start gap-2 hover:shadow-md active:scale-95 transition">
+                    <i class="fab fa-instagram text-3xl ig-logo"></i>
+                    <span class="text-[11px] font-semibold text-gray-700 leading-tight text-center">LLA Tandil</span>
                 </a>
 
-                <a href="https://www.instagram.com/gonzasantaok/" target="_blank" rel="noopener" class="flex items-center justify-between bg-gradient-to-r from-pink-600 to-orange-500 text-white p-4 rounded-xl shadow-sm active:scale-[0.98] transition">
-                    <div class="flex items-center gap-3">
-                        <div class="bg-white bg-opacity-20 w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0">
-                            <i class="fab fa-instagram text-2xl"></i>
-                        </div>
-                        <div>
-                            <div class="font-bold leading-tight">Gonzalo Santamarina</div>
-                            <div class="text-xs text-orange-100">@gonzasantaok</div>
-                        </div>
-                    </div>
-                    <i class="fas fa-chevron-right text-orange-100"></i>
+                <a href="https://www.instagram.com/gonzasantaok/" target="_blank" rel="noopener" aria-label="Instagram Gonzalo Santamarina (@gonzasantaok)" class="bg-white rounded-xl shadow-sm border border-gray-100 p-3 flex flex-col items-center justify-start gap-2 hover:shadow-md active:scale-95 transition">
+                    <i class="fab fa-instagram text-3xl ig-logo"></i>
+                    <span class="text-[11px] font-semibold text-gray-700 leading-tight text-center">Gonzalo Santamarina</span>
                 </a>
             </div>
 
