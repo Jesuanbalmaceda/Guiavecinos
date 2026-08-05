@@ -62,7 +62,6 @@
             </a>
 
             <!-- Grilla de Menú -->
-            <h3 class="font-bold text-gray-600 mb-3 px-1 text-lg">¿Qué estás buscando?</h3>
             <div class="grid grid-cols-2 gap-3">
                 <!-- Botón combinado: Hacé tu reclamo (Servicios + Trámites) -->
                 <button onclick="showView('view-reclamo')" class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition flex flex-col items-center justify-center gap-2 border border-gray-100 active:scale-95 col-span-2">
@@ -146,6 +145,20 @@
             </button>
             <h2 class="text-2xl font-bold text-amber-600 mb-4 border-b-2 border-amber-200 pb-2"><i class="fas fa-bullhorn"></i> Hacé tu reclamo</h2>
 
+            <!-- Contacto directo con la Comisión -->
+            <a href="https://wa.link/yezfk2" target="_blank" class="flex items-center justify-between bg-purple-700 hover:bg-purple-800 p-4 rounded-xl shadow-sm mb-4 active:scale-[0.98] transition">
+                <div class="flex items-center gap-4 text-white">
+                    <div class="bg-white bg-opacity-20 w-12 h-12 rounded-full flex items-center justify-center">
+                        <i class="fab fa-whatsapp text-2xl"></i>
+                    </div>
+                    <div>
+                        <div class="font-bold text-lg leading-tight">Contactar a la Comisión</div>
+                        <div class="text-purple-100 text-sm">Escribinos por WhatsApp</div>
+                    </div>
+                </div>
+                <i class="fas fa-chevron-right text-purple-200"></i>
+            </a>
+
             <!-- Sección: Servicios -->
             <h3 class="font-bold text-gray-600 mb-2 px-1 text-sm uppercase tracking-wide">Servicios</h3>
             <div class="space-y-3 mb-6">
@@ -227,13 +240,6 @@
                         <p>Para denunciar una obra en construcción te recomendamos que consultes la última actualización del Código de Edificación vigente para nuestra ciudad y las últimas ordenanzas referidas al régimen de construcción aprobadas por el Concejo Deliberante de Tandil.</p>
                         <p>Si habiendo consultado todo lo anterior podés confirmar que la obra que querés denunciar incumple con las normas, tenés que escribir una nota dirigida al Director/a de Obras Privadas del Municipio incluyendo: 1) Domicilio 2) Norma incumplida 3) Fotografías, esto es opcional.</p>
                         <p>La nota debe ser firmada por el/la denunciante incluyendo a. Nombre completo; b. Documento de identidad; c. Domicilio y d. Número de teléfono. <span class="font-medium text-gray-800">Esta denuncia es anónima</span> aunque el personal municipal requiere esta información para poder contactar con el/la denunciante en caso que sea necesaria más información.</p>
-                        <p class="bg-orange-50 p-2 rounded border border-orange-100">La nota se puede presentar de forma presencial en la Mesa de entradas del Municipio (Belgrano 485), o bien puede ser enviada como adjunto a <strong>"mesa_entradas@tandil.gov.ar"</strong></p>
-                    </div>
-                    <div class="mt-4 relative">
-                        <button onclick="copyToClipboard('mesa_entradas@tandil.gov.ar', this)" class="w-full bg-gray-800 text-white py-2 rounded-lg font-bold text-xs flex items-center justify-center gap-2 active:scale-95 transition">
-                            <i class="fas fa-copy"></i> Copiar email de Mesa de Entradas
-                        </button>
-                        <div class="toast-msg absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-[10px] py-1 px-2 rounded opacity-0 transition-opacity pointer-events-none">¡Copiado!</div>
                     </div>
                 </div>
 
@@ -264,6 +270,51 @@
                     </div>
                     <a href="mailto:juzfam1-tn@jusbuenosaires.gov.ar" class="block text-center bg-gray-50 border text-gray-600 py-1 rounded text-[10px] font-semibold">juzfam1-tn@jusbuenosaires.gov.ar</a>
                 </div>
+            </div>
+
+            <!-- Sección: Notas -->
+            <h3 class="font-bold text-gray-600 mt-6 mb-2 px-1 text-sm uppercase tracking-wide">Notas</h3>
+            <div class="space-y-4">
+
+                <!-- Notas al Intendente o Secretarios -->
+                <div class="bg-white p-4 rounded-xl shadow-sm border-l-4 border-amber-500">
+                    <div class="font-bold text-gray-800 text-sm mb-1 flex items-center gap-2 uppercase tracking-tight">
+                        <i class="fas fa-file-signature text-amber-500"></i> Notas al Intendente o Secretarios
+                    </div>
+                    <div class="text-xs text-gray-500 mb-3"><i class="fas fa-map-marker-alt"></i> Mesa de Entradas del Municipio · Belgrano 485</div>
+                    <div class="text-[13px] text-gray-700 space-y-3 leading-relaxed">
+                        <p>Las notas al Intendente o a cualquiera de sus Secretarios deben ser presentadas de forma presencial en la Mesa de Entradas del Municipio (Belgrano 485), o bien pueden ser enviadas como adjunto a <strong>"mesa_entradas@tandil.gov.ar"</strong>.</p>
+                    </div>
+                    <div class="mt-4 relative">
+                        <button onclick="copyToClipboard('mesa_entradas@tandil.gov.ar', this)" class="w-full bg-gray-800 text-white py-2 rounded-lg font-bold text-xs flex items-center justify-center gap-2 active:scale-95 transition">
+                            <i class="fas fa-copy"></i> Copiar email de Mesa de Entradas
+                        </button>
+                        <div class="toast-msg absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-[10px] py-1 px-2 rounded opacity-0 transition-opacity pointer-events-none">¡Copiado!</div>
+                    </div>
+                </div>
+
+                <!-- Notas al Presidente del Concejo Deliberante -->
+                <div class="bg-white p-4 rounded-xl shadow-sm border-l-4 border-purple-600">
+                    <div class="font-bold text-gray-800 text-sm mb-1 flex items-center gap-2 uppercase tracking-tight">
+                        <i class="fas fa-landmark text-purple-600"></i> Notas al Presidente del Concejo Deliberante
+                    </div>
+                    <div class="text-xs text-gray-500 mb-3"><i class="fas fa-map-marker-alt"></i> Palacio Municipal · Belgrano 485, 1er piso</div>
+                    <div class="text-[13px] text-gray-700 space-y-3 leading-relaxed">
+                        <p>Las notas al Presidente del Concejo Deliberante deben ser presentadas en la Secretaría de la Presidencia del Honorable Concejo Deliberante, ubicada en el primer piso del Palacio Municipal (Belgrano 485), o bien enviar un correo a <strong>secretaria@hcdtandil.gob.ar</strong> o un WhatsApp al <strong>249 467-0083</strong>.</p>
+                    </div>
+                    <div class="mt-4 space-y-2">
+                        <div class="relative">
+                            <button onclick="copyToClipboard('secretaria@hcdtandil.gob.ar', this)" class="w-full bg-gray-800 text-white py-2 rounded-lg font-bold text-xs flex items-center justify-center gap-2 active:scale-95 transition">
+                                <i class="fas fa-copy"></i> Copiar email de la Secretaría del HCD
+                            </button>
+                            <div class="toast-msg absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-[10px] py-1 px-2 rounded opacity-0 transition-opacity pointer-events-none">¡Copiado!</div>
+                        </div>
+                        <a href="https://wa.me/5492494670083" target="_blank" rel="noopener" class="w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg font-bold text-xs flex items-center justify-center gap-2 active:scale-95 transition">
+                            <i class="fab fa-whatsapp text-base"></i> Escribir por WhatsApp al 249 467-0083
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </div>
 
